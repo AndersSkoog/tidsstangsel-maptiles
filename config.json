@@ -1,0 +1,21 @@
+{
+    "options": {
+      "paths": {
+        "root": "/data"
+      },
+      "domains": ["localhost", "your-railway-domain.com"]
+    },
+    "styles": {
+      "default": {
+        "style": "bright-v9",
+        "tilejson": {
+          "tiles": ["http://localhost:8080/data/{z}/{x}/{y}.pbf"]
+        }
+      }
+    },
+    "data": {
+      "yourmap": {
+        "mbtiles": "yourmap.mbtiles"
+      }
+    }
+}
