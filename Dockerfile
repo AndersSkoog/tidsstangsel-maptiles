@@ -8,4 +8,4 @@ COPY map.mbtiles /tileserver/map.mbtiles
 EXPOSE 8080
 
 # Start TileServer-GL
-CMD tileserver-gl --file /tileserver/map.mbtiles
+CMD tileserver-gl -C --file /tileserver/map.mbtiles
