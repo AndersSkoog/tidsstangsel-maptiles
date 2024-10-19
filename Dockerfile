@@ -1,11 +1,11 @@
 FROM klokantech/tileserver-gl
 
-# Copy the config.json and .mbtiles file to the /data directory
-COPY ./config.json /data/config.json
-COPY ./map.mbtiles /data/yourmap.mbtiles
+RUN mkdir tileserver
+COPY config.json /tileserver/config.json
+COPY map.mbtiles /tileserver/map.mbtiles
 
 # Expose port 80 for the server
-EXPOSE 80
+EXPOSE 8080
 
 # Start TileServer-GL
-CMD ["tileserver-gl", "config.json"]
+CMD tileserver-gl --file /tileserver/map.mbtiles
